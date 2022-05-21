@@ -10,6 +10,7 @@ public class HandAnim : MonoBehaviour
 {
     public ActionBasedController controller = null;
     public Animator m_animator = null;
+    public Rigidbody rb = null;
 
     public const string ANIM_LAYER_NAME_POINT = "Point Layer";
     public const string ANIM_LAYER_NAME_THUMB = "Thumb Layer";
