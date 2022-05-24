@@ -6,22 +6,24 @@ using UnityEngine;
 public class ColliderDelay : MonoBehaviour
 {
     public float delayTime;
-    public Collider col;
+    public GameObject rootObj;
 
-    public void disableCollider()
-    {
-        col.enabled = false;
-    }
-
-    public void enableCollider()
+    public void delayEnableCollider()
     {
         StartCoroutine(delayedEnable());
     }
 
     private IEnumerator delayedEnable()
     {
+        foreach(Collider c in rootObj.GetComponentsInChildren<Collider>())
+        {
+            c.enabled = false;
+        }
         yield return new WaitForSeconds(delayTime);
-        col.enabled = true;
+        foreach (Collider c in rootObj.GetComponentsInChildren<Collider>())
+        {
+            c.enabled = true;
+        }
     }
 }
 

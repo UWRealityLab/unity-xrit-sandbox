@@ -329,7 +329,6 @@ GameObject:
   - component: {fileID: 158138608}
   - component: {fileID: 158138607}
   - component: {fileID: 158138613}
-  - component: {fileID: 158138614}
   m_Layer: 0
   m_Name: Throwable Ball
   m_TagString: Untagged
@@ -402,34 +401,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 158138614}
-        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
-        m_MethodName: disableCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 158138614}
-        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
-        m_MethodName: enableCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -605,20 +580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: 1abdb7dea122a5f43bdfad85f70e29fc, type: 2}
---- !u!114 &158138614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158138606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c1565be8471d14da84651f7053513c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0.2
-  col: {fileID: 158138609}
 --- !u!1 &165160784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1227,7 @@ GameObject:
   - component: {fileID: 520035403}
   - component: {fileID: 520035402}
   - component: {fileID: 520035401}
+  - component: {fileID: 520035405}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -1520,7 +1482,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 520035405}
+        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
+        m_MethodName: delayEnableCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1761,6 +1735,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &520035405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520035399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c1565be8471d14da84651f7053513c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.2
+  rootObj: {fileID: 1022329412}
 --- !u!1 &532742755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,7 +2268,6 @@ GameObject:
   - component: {fileID: 738106076}
   - component: {fileID: 738106075}
   - component: {fileID: 738106074}
-  - component: {fileID: 738106073}
   m_Layer: 0
   m_Name: Throwable Ball (2)
   m_TagString: Untagged
@@ -2288,20 +2275,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &738106073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 738106072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c1565be8471d14da84651f7053513c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0.2
-  col: {fileID: 738106077}
 --- !u!114 &738106074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,34 +2353,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 738106073}
-        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
-        m_MethodName: disableCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 738106073}
-        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
-        m_MethodName: enableCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -3200,7 +3149,6 @@ GameObject:
   - component: {fileID: 1153096508}
   - component: {fileID: 1153096507}
   - component: {fileID: 1153096506}
-  - component: {fileID: 1153096505}
   m_Layer: 0
   m_Name: Throwable Ball (1)
   m_TagString: Untagged
@@ -3208,20 +3156,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1153096505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153096504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c1565be8471d14da84651f7053513c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0.2
-  col: {fileID: 1153096509}
 --- !u!114 &1153096506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,34 +3234,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1153096505}
-        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
-        m_MethodName: disableCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1153096505}
-        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
-        m_MethodName: enableCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -3615,6 +3525,7 @@ GameObject:
   - component: {fileID: 1242908242}
   - component: {fileID: 1242908241}
   - component: {fileID: 1242908240}
+  - component: {fileID: 1242908244}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -3869,7 +3780,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1242908244}
+        m_TargetAssemblyTypeName: ColliderDelay, Assembly-CSharp
+        m_MethodName: delayEnableCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4110,6 +4033,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1242908244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242908238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c1565be8471d14da84651f7053513c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.2
+  rootObj: {fileID: 984475643}
 --- !u!1 &1286216058
 GameObject:
   m_ObjectHideFlags: 0
